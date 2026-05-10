@@ -1,277 +1,1126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>For Teesha ❤️</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For Kaddu ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--blush:#F7C5C5;--rose:#E8748A;--deep:#C0446A;--cream:#FDF6EF;--warm:#F9E8DF;--text:#3A2230;--muted:#9A7080;--gold:#D4A56A;}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;overflow-x:hidden;}
+:root {
+  --ink: #2C1810;
+  --rose: #C9405A;
+  --blush: #F2A0AD;
+  --petal: #FADADD;
+  --cream: #FBF5EC;
+  --warm: #F5E6D3;
+  --sepia: #8B6552;
+  --gold: #C8963E;
+  --paper: #FDF8F0;
+}
 
-.page{display:none;min-height:100vh;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;position:relative;overflow:hidden;}
-.page.show{display:flex;}
-.page::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.5;}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
-.petal{position:fixed;pointer-events:none;animation:petalFall linear infinite;opacity:0;z-index:1;}
-@keyframes petalFall{0%{transform:translateY(-60px) rotate(0deg);opacity:0;}10%{opacity:.7;}90%{opacity:.4;}100%{transform:translateY(110vh) rotate(540deg);opacity:0;}}
+body {
+  font-family: 'Lora', serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: default;
+}
 
-/* PAGE 1 */
-#page1{background:linear-gradient(160deg,#FDF0F0 0%,#FAE0E4 50%,#F9D6D6 100%);}
-.intro-chip{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rose);border:1px solid var(--blush);padding:6px 18px;border-radius:50px;margin-bottom:28px;background:rgba(255,255,255,.6);backdrop-filter:blur(8px);position:relative;z-index:2;animation:fadeUp .8s ease both;}
-.hero-title{font-family:'Italiana',serif;font-size:clamp(2.6rem,8vw,5.2rem);line-height:1.1;color:var(--text);margin-bottom:14px;position:relative;z-index:2;animation:fadeUp .9s ease .1s both;}
-.hero-title span{color:var(--rose);}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.5vw,1.3rem);font-style:italic;color:var(--muted);margin-bottom:44px;position:relative;z-index:2;animation:fadeUp 1s ease .2s both;}
-.btn-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2;animation:fadeUp 1s ease .3s both;}
-.btn{padding:14px 36px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;border:none;transition:all .3s cubic-bezier(.34,1.56,.64,1);letter-spacing:.5px;}
-.btn-yes{background:linear-gradient(135deg,var(--rose),var(--deep));color:#fff;box-shadow:0 8px 28px rgba(200,68,106,.35);}
-.btn-yes:hover{transform:translateY(-5px) scale(1.06);box-shadow:0 16px 40px rgba(200,68,106,.45);}
-.btn-no{background:transparent;color:var(--rose);border:1.5px solid var(--blush);}
-.deco-ring{position:absolute;border-radius:50%;border:1px solid rgba(232,116,138,.18);pointer-events:none;z-index:1;}
+/* ── PAPER TEXTURE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
 
-/* COUNTDOWN */
-.cd-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:var(--muted);margin-top:32px;position:relative;z-index:2;animation:fadeUp 1s ease .5s both;}
-.countdown-wrap{display:flex;gap:12px;margin-top:12px;position:relative;z-index:2;animation:fadeUp 1s ease .6s both;flex-wrap:wrap;justify-content:center;}
-.cd-box{background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border:1px solid rgba(232,116,138,.2);border-radius:14px;padding:12px 16px;min-width:64px;box-shadow:0 6px 20px rgba(200,68,106,.1);}
-.cd-num{font-family:'Italiana',serif;font-size:2rem;color:var(--rose);line-height:1;}
-.cd-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+/* ── PAGES ── */
+.page {
+  display: none;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.page.show { display: flex; }
 
-/* PAGE 2 */
-#page2{background:#1A0E14;}
-#page2 .page-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(247,197,197,.5);margin-bottom:16px;position:relative;z-index:2;}
-#page2 .section-title{font-family:'Italiana',serif;font-size:clamp(2rem,6vw,3.6rem);color:#F9E8DF;margin-bottom:32px;position:relative;z-index:2;}
-.slideshow-wrap{position:relative;z-index:2;width:min(90vw,360px);}
-.slideshow-frame{width:100%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.05);}
-.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease,transform 1.2s ease;transform:scale(1.04);}
-.slide.active{opacity:1;transform:scale(1);}
-.slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,14,20,.7) 0%,transparent 50%);z-index:1;}
-.slide-counter{position:absolute;bottom:18px;right:18px;font-size:12px;color:rgba(249,232,223,.7);z-index:2;letter-spacing:1px;}
-.dots{display:flex;gap:7px;justify-content:center;margin-top:18px;}
-.dot{width:6px;height:6px;border-radius:50%;background:rgba(247,197,197,.25);transition:all .4s;}
-.dot.active{background:var(--rose);width:20px;border-radius:4px;}
-.gift-prompt{display:none;flex-direction:column;align-items:center;margin-top:28px;z-index:2;position:relative;animation:fadeUp .7s ease both;}
-.gift-prompt.visible{display:flex;}
-.gift-btn{display:flex;align-items:center;gap:10px;padding:14px 30px;border-radius:50px;background:linear-gradient(135deg,var(--rose),var(--deep));color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;border:none;box-shadow:0 10px 30px rgba(200,68,106,.4);transition:all .3s cubic-bezier(.34,1.56,.64,1);}
-.gift-btn:hover{transform:translateY(-5px) scale(1.05);}
-.gift-btn .emoji{font-size:20px;animation:wiggle 1.6s ease infinite;}
-@keyframes wiggle{0%,100%{transform:rotate(-8deg);}50%{transform:rotate(8deg);}}
+/* ══════════════════════════════
+   PAGE 1 — PROPOSAL
+══════════════════════════════ */
+#page1 {
+  background: var(--paper);
+  background-image:
+    radial-gradient(ellipse at 20% 20%, #FDEAEA 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, #FDE8D8 0%, transparent 55%);
+}
 
-/* PAGE 3 */
-#page3{background:linear-gradient(160deg,#FDF6EF 0%,#F9E8DF 100%);}
-.envelope-scene{position:relative;z-index:2;margin:20px 0;}
-.envelope{width:280px;height:185px;position:relative;filter:drop-shadow(0 20px 50px rgba(200,68,106,.25));transition:transform .4s cubic-bezier(.34,1.56,.64,1);}
-.envelope:hover{transform:translateY(-8px) rotate(1deg);}
-.env-body{width:100%;height:100%;background:linear-gradient(160deg,#FFF8F5,#FDEAE0);border-radius:8px;position:absolute;border:1px solid rgba(232,116,138,.2);}
-.env-flap{position:absolute;width:100%;height:50%;background:linear-gradient(140deg,#F9D0D0,#EDAAB4);clip-path:polygon(0 0,100% 0,50% 80%);border-radius:8px 8px 0 0;z-index:1;}
-.env-bottom{position:absolute;bottom:0;width:100%;height:50%;background:linear-gradient(160deg,#FFF0EA,#FDDDD8);clip-path:polygon(0 100%,100% 100%,50% 0%);}
-.env-left{position:absolute;bottom:0;left:0;width:50%;height:80%;background:linear-gradient(100deg,#FAE2DC,#F9D5D0);clip-path:polygon(0 0,0 100%,100% 100%);}
-.env-right{position:absolute;bottom:0;right:0;width:50%;height:80%;background:linear-gradient(80deg,#F9D5D0,#FAE2DC);clip-path:polygon(100% 0,0 100%,100% 100%);}
-.env-seal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:42px;height:42px;background:linear-gradient(135deg,var(--rose),var(--deep));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 16px rgba(200,68,106,.4);}
-.env-hint{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);margin-top:16px;}
+/* Ruled lines like a notebook */
+#page1::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    rgba(180,140,120,0.1) 31px,
+    rgba(180,140,120,0.1) 32px
+  );
+  pointer-events: none;
+}
+
+/* Red margin line */
+.margin-line {
+  position: absolute;
+  left: 72px;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: rgba(200, 80, 100, 0.25);
+  z-index: 1;
+}
+
+/* Torn paper edge top */
+.torn-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 18px;
+  background: var(--paper);
+  clip-path: polygon(0 0, 3% 100%, 6% 30%, 9% 90%, 12% 20%, 15% 80%, 18% 10%, 21% 70%, 24% 25%, 27% 85%, 30% 15%, 33% 75%, 36% 35%, 39% 95%, 42% 5%, 45% 65%, 48% 30%, 51% 90%, 54% 20%, 57% 80%, 60% 10%, 63% 70%, 66% 25%, 69% 85%, 72% 15%, 75% 75%, 78% 40%, 81% 95%, 84% 5%, 87% 65%, 90% 20%, 93% 80%, 96% 30%, 100% 0, 100% 0, 0 0);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+  z-index: 2;
+}
+
+.handwritten-tag {
+  font-family: 'Caveat', cursive;
+  font-size: 13px;
+  color: var(--rose);
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 3;
+  transform: rotate(-1.5deg);
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease 0.1s both;
+}
+
+/* Underline squiggle via SVG */
+.handwritten-tag span {
+  position: relative;
+}
+.handwritten-tag span::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0,5 Q10,0 20,5 Q30,10 40,5 Q50,0 60,5 Q70,10 80,5 Q90,0 100,5' fill='none' stroke='%23C9405A' stroke-width='1.5' opacity='0.5'/%3E%3C/svg%3E") repeat-x center;
+}
+
+.hero-title {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.05;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.2s both;
+}
+
+.hero-title .name {
+  color: var(--rose);
+  display: inline-block;
+  transform: rotate(-2deg);
+  text-decoration: underline;
+  text-decoration-color: var(--blush);
+  text-underline-offset: 6px;
+}
+
+.hero-title .question {
+  display: block;
+  font-weight: 600;
+  font-size: 0.72em;
+  color: var(--sepia);
+  margin-top: 6px;
+}
+
+.doodle-heart {
+  position: relative;
+  z-index: 3;
+  margin: 16px 0;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.4s both;
+}
+
+.doodle-heart svg {
+  width: 70px;
+  height: 70px;
+  stroke: var(--rose);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  animation: heartbeat 1.8s ease infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  30% { transform: scale(1.18); }
+  60% { transform: scale(1.05); }
+}
+
+.hero-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  color: var(--sepia);
+  margin-bottom: 36px;
+  text-align: center;
+  max-width: 340px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 3;
+  transform: rotate(0.5deg);
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.5s both;
+}
+
+.btn-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.6s both;
+}
+
+/* Handdrawn button look */
+.btn-yes {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 12px 34px;
+  background: var(--rose);
+  color: #fff;
+  border: none;
+  border-radius: 4px 16px 4px 16px;
+  box-shadow: 4px 4px 0px #8B2840, inset 0 1px 0 rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: relative;
+}
+.btn-yes::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1.5px dashed rgba(255,255,255,0.3);
+  border-radius: 3px 14px 3px 14px;
+  pointer-events: none;
+}
+.btn-yes:hover { transform: translate(-2px,-3px); box-shadow: 6px 7px 0px #8B2840; }
+.btn-yes:active { transform: translate(2px,2px); box-shadow: 2px 2px 0px #8B2840; }
+
+.btn-no {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--sepia);
+  border: 2px solid var(--blush);
+  border-radius: 16px 4px 16px 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.btn-no:hover { background: var(--petal); transform: rotate(-3deg) scale(0.95); }
+
+/* Countdown */
+.cd-wrap {
+  margin-top: 40px;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease 0.8s both;
+}
+.cd-label-main {
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem;
+  color: var(--sepia);
+  margin-bottom: 14px;
+  transform: rotate(-0.5deg);
+  display: block;
+}
+.cd-boxes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cd-box {
+  background: #fff;
+  border: 1.5px solid rgba(200,80,100,0.18);
+  border-radius: 10px 4px 10px 4px;
+  padding: 10px 14px;
+  min-width: 62px;
+  box-shadow: 2px 3px 0 rgba(200,80,100,0.12);
+  position: relative;
+}
+.cd-box::after {
+  content: attr(data-label);
+  display: block;
+  font-family: 'Caveat', cursive;
+  font-size: 10px;
+  color: var(--sepia);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+.cd-num {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--rose);
+  line-height: 1;
+}
+
+/* Floating petals */
+.petal-float {
+  position: fixed;
+  pointer-events: none;
+  font-size: 1.2rem;
+  animation: floatPetal linear infinite;
+  z-index: 10;
+  opacity: 0;
+}
+@keyframes floatPetal {
+  0%   { transform: translateY(-30px) rotate(0deg);   opacity: 0; }
+  10%  { opacity: 0.7; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+}
+
+/* Sticky-note decoration */
+.sticky {
+  position: absolute;
+  background: #FFF9C4;
+  padding: 12px 16px;
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem;
+  color: #555;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.12);
+  z-index: 3;
+  line-height: 1.5;
+  max-width: 140px;
+}
+
+/* ══════════════════════════════
+   PAGE 2 — MEMORIES
+══════════════════════════════ */
+#page2 {
+  background: #1C1010;
+  background-image: radial-gradient(ellipse at 50% 0%, #3D1520 0%, transparent 60%);
+}
+
+#page2 .page-chip {
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  color: rgba(242,160,173,0.5);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+#page2 .section-head {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: #FBF5EC;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.7s ease 0.1s both;
+  font-style: italic;
+}
+
+/* Polaroid-style frame */
+.polaroid-wrap {
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.7s ease 0.2s both;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 12px 12px 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3);
+  width: min(88vw, 320px);
+  transform: rotate(-1deg);
+  position: relative;
+}
+
+.polaroid-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+}
+
+.polaroid-img .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.polaroid-img .slide.active { opacity: 1; }
+
+.polaroid-caption {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Push-pin */
+.pushpin {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle at 40% 35%, #FF6060, #A82020);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  z-index: 3;
+}
+.pushpin::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 10px;
+  background: #888;
+  border-radius: 0 0 2px 2px;
+}
+
+.film-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+.film-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(242,160,173,0.2);
+  transition: all 0.4s;
+  border: 1px solid rgba(242,160,173,0.3);
+}
+.film-dot.active {
+  background: var(--rose);
+  width: 22px;
+  border-radius: 4px;
+  border-color: var(--rose);
+}
+
+.gift-prompt {
+  display: none;
+  margin-top: 28px;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.6s ease both;
+}
+.gift-prompt.visible { display: flex; }
+
+.gift-btn {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, var(--rose), #9C2A40);
+  color: #fff;
+  border: none;
+  border-radius: 4px 18px 4px 18px;
+  cursor: pointer;
+  box-shadow: 3px 4px 0 #6B1A2A;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.gift-btn:hover { transform: translate(-2px,-3px); box-shadow: 5px 7px 0 #6B1A2A; }
+
+/* ══════════════════════════════
+   PAGE 3 — ENVELOPE
+══════════════════════════════ */
+#page3 {
+  background: var(--warm);
+  background-image:
+    radial-gradient(ellipse at 30% 30%, #FDE8D8 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 70%, #FDEAEA 0%, transparent 50%);
+}
+
+#page3 .section-head {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.7s ease both;
+}
+#page3 .section-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--sepia);
+  margin-bottom: 36px;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.7s ease 0.1s both;
+}
+
+/* HAND-DRAWN ENVELOPE */
+.envelope-wrap {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  animation: fadeSlideUp 0.7s ease 0.2s both;
+  margin-bottom: 36px;
+}
+.envelope-wrap:hover .env-main { transform: translateY(-6px) rotate(1deg); }
+
+.env-main {
+  width: 300px;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(.34,1.56,.64,1);
+  filter: drop-shadow(0 12px 30px rgba(180,80,100,0.22));
+}
+
+/* SVG envelope lines look hand-drawn */
+.env-main svg { width: 100%; }
+
+.env-click-hint {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--sepia);
+  margin-top: 12px;
+  text-align: center;
+  opacity: 0.7;
+  animation: gentleWiggle 2s ease-in-out infinite;
+}
+@keyframes gentleWiggle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
 
 /* SCRATCH CARD */
-.scratch-container{position:relative;z-index:2;margin-top:32px;animation:fadeUp .8s ease .2s both;}
-.scratch-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
-.scratch-card{position:relative;width:260px;height:120px;border-radius:18px;overflow:hidden;box-shadow:0 12px 40px rgba(200,68,106,.2);margin:0 auto;}
-.scratch-reveal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FFF0F5,#FFE4EC);font-family:'Italiana',serif;font-size:1.25rem;color:var(--rose);padding:16px;text-align:center;line-height:1.5;}
-canvas#scratchCanvas{position:absolute;inset:0;border-radius:18px;}
-.scratch-hint{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85rem;color:var(--muted);margin-top:10px;}
+.scratch-section {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeSlideUp 0.7s ease 0.35s both;
+}
+.scratch-title {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: var(--sepia);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.scratch-card {
+  position: relative;
+  width: 270px;
+  height: 120px;
+  border-radius: 6px 18px 6px 18px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 3px 4px 0 rgba(180,80,100,0.2), 0 8px 24px rgba(180,80,100,0.12);
+  border: 1.5px solid rgba(200,100,120,0.2);
+}
+.scratch-reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF5F7;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--rose);
+  padding: 16px;
+  text-align: center;
+  line-height: 1.6;
+}
+#scratchCanvas {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px 18px 6px 18px;
+}
+.scratch-hint {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem;
+  color: var(--sepia);
+  margin-top: 10px;
+  opacity: 0.7;
+}
 
-/* PAGE 4 */
-#page4{background:linear-gradient(160deg,#FDF6EF,#F9E0E8);padding:50px 24px;}
-.letter-card{max-width:680px;width:100%;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-radius:28px;padding:44px 40px;box-shadow:0 30px 80px rgba(180,80,100,.12),0 0 0 1px rgba(232,116,138,.1);text-align:left;position:relative;z-index:2;}
-.letter-card::before{content:'\201C';position:absolute;top:20px;left:28px;font-family:'Cormorant Garamond',serif;font-size:100px;line-height:1;color:var(--blush);opacity:.5;pointer-events:none;}
-.letter-heading{font-family:'Italiana',serif;font-size:2rem;color:var(--rose);margin-bottom:6px;}
-.letter-date{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
-.letter-divider{width:48px;height:2px;background:linear-gradient(90deg,var(--rose),transparent);border-radius:2px;margin-bottom:28px;}
-.letter-body{font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.95;color:#4A3040;min-height:60px;}
-.cursor-blink{display:inline-block;width:2px;height:1em;background:var(--rose);vertical-align:text-bottom;animation:blink .7s step-end infinite;margin-left:1px;}
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-.letter-sign{margin-top:32px;font-family:'Italiana',serif;font-size:1.5rem;color:var(--rose);text-align:right;opacity:0;transition:opacity 1.2s ease;}
-.letter-sign.visible{opacity:1;}
-.final-banner{margin-top:32px;position:relative;z-index:2;animation:fadeUp .8s ease both;}
-.love-text{font-family:'Italiana',serif;font-size:clamp(2rem,6vw,3.8rem);background:linear-gradient(135deg,var(--rose),var(--deep));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
-.forever-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--muted);margin-top:8px;letter-spacing:1px;}
-.diary-link-btn{margin-top:22px;display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:50px;background:rgba(255,255,255,.7);border:1px solid rgba(232,116,138,.3);color:var(--rose);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 16px rgba(200,68,106,.12);position:relative;z-index:2;}
-.diary-link-btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(200,68,106,.2);}
+/* ══════════════════════════════
+   PAGE 4 — LETTER
+══════════════════════════════ */
+#page4 {
+  background: var(--paper);
+  background-image: radial-gradient(ellipse at 40% 20%, #FDE8E8 0%, transparent 50%);
+  padding: 50px 24px;
+}
 
-/* PAGE 5 - DIARY */
-#page5{background:linear-gradient(160deg,#1A0E14,#2E1420);padding:50px 24px;}
-.diary-chip{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(247,197,197,.4);margin-bottom:16px;position:relative;z-index:2;animation:fadeUp .7s ease both;}
-.diary-book{width:min(90vw,360px);background:linear-gradient(160deg,#3D1A28,#2A1018);border-radius:24px;padding:36px 30px;box-shadow:0 30px 80px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06);position:relative;z-index:2;border:1px solid rgba(232,116,138,.12);}
-.diary-book::before{content:'';position:absolute;left:26px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,rgba(232,116,138,.3),transparent);border-radius:2px;}
-.diary-title{font-family:'Italiana',serif;font-size:1.9rem;color:#F9E8DF;margin-bottom:4px;}
-.diary-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:rgba(247,197,197,.4);margin-bottom:26px;}
-.lock-icon{font-size:2.4rem;margin-bottom:16px;display:block;animation:lockPulse 2s ease infinite;}
-@keyframes lockPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
-.diary-hint{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(247,197,197,.45);font-size:.88rem;margin-bottom:18px;}
-.diary-input{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(232,116,138,.22);border-radius:12px;padding:14px 18px;font-family:'DM Sans',sans-serif;font-size:16px;color:#F9E8DF;letter-spacing:3px;text-align:center;outline:none;transition:border .3s,box-shadow .3s;}
-.diary-input::placeholder{color:rgba(247,197,197,.25);letter-spacing:1px;}
-.diary-input:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(232,116,138,.12);}
-.diary-submit{margin-top:14px;padding:12px 28px;border-radius:50px;background:linear-gradient(135deg,var(--rose),var(--deep));color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;border:none;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 24px rgba(200,68,106,.3);}
-.diary-submit:hover{transform:translateY(-3px) scale(1.04);}
-.diary-error{font-size:13px;color:#FF8FA3;margin-top:10px;min-height:18px;font-family:'Cormorant Garamond',serif;font-style:italic;}
-.diary-content{display:none;}
-.diary-content.open{display:block;animation:fadeUp .8s ease both;}
-.diary-entries{margin-top:16px;text-align:left;}
-.diary-entry{padding:14px 0;border-bottom:1px solid rgba(232,116,138,.1);font-family:'Cormorant Garamond',serif;color:rgba(249,232,223,.8);font-size:1.05rem;line-height:1.75;}
-.diary-entry:last-child{border-bottom:none;}
-.diary-entry-date{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(232,116,138,.55);margin-bottom:5px;}
-.unlocked-header{text-align:center;margin-bottom:20px;}
-.unlocked-icon{font-size:1.8rem;}
-.unlocked-title{font-family:'Italiana',serif;font-size:1.5rem;color:#F9E8DF;margin-top:6px;}
+/* Notebook paper card */
+.letter-paper {
+  width: min(92vw, 640px);
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  border-radius: 2px;
+  padding: 48px 44px 44px;
+  box-shadow: 4px 6px 0 rgba(180,80,100,0.1), 0 20px 60px rgba(0,0,0,0.1);
+  border: 1px solid rgba(200,160,140,0.2);
+  /* Notebook lines */
+  background-image:
+    linear-gradient(90deg, transparent 56px, rgba(200,80,100,0.12) 56px, rgba(200,80,100,0.12) 58px, transparent 58px),
+    repeating-linear-gradient(transparent, transparent 31px, rgba(150,120,100,0.1) 31px, rgba(150,120,100,0.1) 32px);
+  background-size: 100% 100%, 100% 32px;
+  animation: fadeSlideUp 0.8s ease both;
+}
 
-/* FIREWORKS */
-#fwCanvas{position:fixed;inset:0;pointer-events:none;z-index:8888;}
+/* Paper holes */
+.letter-paper::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
 
-/* SHARED */
-.section-title{font-family:'Italiana',serif;font-size:clamp(2rem,6vw,3.6rem);color:var(--text);margin-bottom:8px;position:relative;z-index:2;animation:fadeUp .8s ease both;}
-.section-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--muted);margin-bottom:36px;position:relative;z-index:2;animation:fadeUp .8s ease .1s both;}
+.hole {
+  position: absolute;
+  left: 28px;
+  width: 16px;
+  height: 16px;
+  background: var(--cream);
+  border-radius: 50%;
+  border: 1.5px solid rgba(150,120,100,0.2);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 1;
+}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:520px){.letter-card{padding:28px 22px;}.letter-card::before{font-size:60px;}.countdown-wrap{gap:8px;}.cd-box{min-width:56px;padding:10px 12px;}}
+.letter-to {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--rose);
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 2;
+  padding-left: 32px;
+}
+.letter-date-line {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  color: var(--sepia);
+  margin-bottom: 24px;
+  padding-left: 32px;
+  opacity: 0.7;
+  position: relative;
+  z-index: 2;
+}
+.letter-divider {
+  width: 50px;
+  height: 2px;
+  background: var(--rose);
+  margin: 0 0 24px 32px;
+  opacity: 0.5;
+  position: relative;
+  z-index: 2;
+  border-radius: 2px;
+}
+
+.letter-body {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #3A2230;
+  padding-left: 32px;
+  position: relative;
+  z-index: 2;
+  min-height: 80px;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--rose);
+  vertical-align: text-bottom;
+  animation: cursorBlink 0.7s step-end infinite;
+  margin-left: 1px;
+}
+@keyframes cursorBlink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+
+.letter-sign {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  color: var(--rose);
+  text-align: right;
+  margin-top: 28px;
+  padding-right: 8px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  transform: rotate(-1.5deg);
+  display: block;
+}
+.letter-sign.visible { opacity: 1; }
+
+/* Final love banner */
+.love-banner {
+  margin-top: 36px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.8s ease 0.2s both;
+}
+.love-word {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  color: var(--rose);
+  line-height: 1;
+  text-shadow: 3px 3px 0 rgba(180,60,80,0.15);
+}
+.love-forever {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--sepia);
+  margin-top: 8px;
+  letter-spacing: 1.5px;
+}
+
+.diary-link-btn {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  background: var(--warm);
+  border: 1.5px solid rgba(200,80,100,0.25);
+  border-radius: 16px 4px 16px 4px;
+  color: var(--rose);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 2;
+  box-shadow: 2px 3px 0 rgba(200,80,100,0.12);
+}
+.diary-link-btn:hover { transform: translate(-2px,-2px); box-shadow: 4px 5px 0 rgba(200,80,100,0.2); }
+
+/* ══════════════════════════════
+   PAGE 5 — SECRET DIARY
+══════════════════════════════ */
+#page5 {
+  background: #180E12;
+  background-image: radial-gradient(ellipse at 50% 0%, #321020 0%, transparent 60%);
+}
+
+.diary-outer {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 360px);
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+/* Book spine effect */
+.diary-book {
+  background: linear-gradient(135deg, #3D1A28, #2A1018);
+  border-radius: 2px 18px 18px 2px;
+  padding: 36px 28px;
+  box-shadow:
+    -6px 0 0 #4A1020,
+    -9px 0 0 #3A0E18,
+    0 20px 60px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,100,130,0.12);
+  position: relative;
+}
+
+/* Gold gilded edge */
+.diary-book::before {
+  content: '';
+  position: absolute;
+  top: 2px; bottom: 2px; right: -1px;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+  border-radius: 0 2px 2px 0;
+  opacity: 0.4;
+}
+
+.diary-chip {
+  font-family: 'Caveat', cursive;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: rgba(242,160,173,0.4);
+  text-align: center;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+.diary-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  color: #FBF5EC;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.diary-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  color: rgba(242,160,173,0.35);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.lock-icon {
+  display: block;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  animation: lockPulse 2.5s ease infinite;
+}
+@keyframes lockPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.1) rotate(-5deg);} }
+
+.diary-hint {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: rgba(242,160,173,0.4);
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.diary-hint em { font-size: 0.78rem; opacity: 0.7; }
+
+.diary-input {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,100,130,0.2);
+  border-radius: 10px 3px 10px 3px;
+  padding: 13px 16px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: #FBF5EC;
+  letter-spacing: 4px;
+  text-align: center;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.diary-input::placeholder { color: rgba(242,160,173,0.2); letter-spacing: 1px; }
+.diary-input:focus { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(200,64,90,0.12); }
+
+.diary-submit {
+  margin-top: 14px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--rose), #8B2840);
+  color: #fff;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px 14px 3px 14px;
+  cursor: pointer;
+  box-shadow: 2px 3px 0 #5A1428;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.diary-submit:hover { transform: translate(-1px,-2px); box-shadow: 3px 5px 0 #5A1428; }
+
+.diary-error {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: #FF8FA3;
+  text-align: center;
+  margin-top: 10px;
+  min-height: 20px;
+}
+
+/* Diary entries */
+.diary-content { display: none; }
+.diary-content.open { display: block; animation: fadeSlideUp 0.8s ease both; }
+
+.unlocked-header { text-align: center; margin-bottom: 20px; }
+.unlocked-emoji { font-size: 2rem; display: block; margin-bottom: 4px; }
+.unlocked-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #FBF5EC;
+}
+
+.diary-entries { margin-top: 12px; }
+.diary-entry {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(200,100,130,0.1);
+  position: relative;
+}
+.diary-entry:last-child { border-bottom: none; }
+.diary-entry-date {
+  font-family: 'Caveat', cursive;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(200,100,130,0.5);
+  margin-bottom: 5px;
+}
+.diary-entry p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.97rem;
+  color: rgba(251,245,236,0.75);
+  line-height: 1.8;
+}
+
+/* ── FIREWORKS ── */
+#fwCanvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9990;
+}
+
+/* ── SHARED ANIMATIONS ── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .letter-paper { padding: 36px 20px 32px; }
+  .letter-to, .letter-date-line, .letter-divider, .letter-body { padding-left: 20px; }
+  .hole { left: 14px; }
+  .letter-paper { background-position: 46px 0, 0 0; background-size: 100% 100%, 100% 32px; }
+}
 </style>
 </head>
 <body>
 
-
 <canvas id="fwCanvas"></canvas>
 <audio id="bgm" loop><source src="khat.mp3" type="audio/mpeg"></audio>
 
-<!-- PAGE 1 — PROPOSAL + COUNTDOWN -->
+<!-- ══════ PAGE 1 ══════ -->
 <div class="page show" id="page1">
-  <div class="deco-ring" style="width:500px;height:500px;top:-140px;right:-160px;"></div>
-  <div class="deco-ring" style="width:320px;height:320px;bottom:-80px;left:-100px;"></div>
-  <div class="deco-ring" style="width:160px;height:160px;top:30%;right:8%;"></div>
+  <div class="torn-top"></div>
+  <div class="margin-line"></div>
 
-  <div class="intro-chip">✦ A Message For You ✦</div>
-  <h1 class="hero-title">Teesha,<br/>Will You Be My<br/><span>Valentine?</span></h1>
-  <p class="hero-sub">"Some feelings are too big for words —<br/>but I'm going to try."</p>
+  <!-- Sticky notes -->
+  <div class="sticky" style="top:90px;right:20px;transform:rotate(3deg);z-index:4;">
+    14 Feb 💕<br/>mark this day!
+  </div>
+
+  <div class="handwritten-tag"><span>✦ a message just for you ✦</span></div>
+
+  <h1 class="hero-title">
+    <span class="name">Kaddu,</span>
+    <span class="question">Will You Be My Valentine?</span>
+  </h1>
+
+  <div class="doodle-heart">
+    <!-- Hand-drawn heart SVG -->
+    <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,80 C20,58 5,40 8,22 C11,6 28,2 40,14 C44,18 48,22 50,26 C52,22 56,18 60,14 C72,2 89,6 92,22 C95,40 80,58 50,80 Z"
+        stroke="#C9405A" fill="rgba(201,64,90,0.15)" stroke-width="2.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <p class="hero-sub">"Some feelings are too big for words —<br/>but I'll spend forever trying." 🌸</p>
 
   <div class="btn-row">
-    <button class="btn btn-yes" onclick="yesClicked()">Yes, always ❤️</button>
-    <button class="btn btn-no" id="noBtn">No</button>
+    <button class="btn-yes" onclick="yesClicked()">Yes, always ❤️</button>
+    <button class="btn-no" id="noBtn" onmouseover="moveNoBtn(this)">No</button>
   </div>
 
-  <p class="cd-title">💫 Next anniversary in...</p>
-  <div class="countdown-wrap">
-    <div class="cd-box"><div class="cd-num" id="cdDays">--</div><div class="cd-label">Days</div></div>
-    <div class="cd-box"><div class="cd-num" id="cdHours">--</div><div class="cd-label">Hours</div></div>
-    <div class="cd-box"><div class="cd-num" id="cdMins">--</div><div class="cd-label">Mins</div></div>
-    <div class="cd-box"><div class="cd-num" id="cdSecs">--</div><div class="cd-label">Secs</div></div>
-  </div>
+
 </div>
 
-<!-- PAGE 2 — SLIDESHOW -->
+<!-- ══════ PAGE 2 ══════ -->
 <div class="page" id="page2">
-  <p class="page-label">✦ Memories ✦</p>
-  <h1 class="section-title" style="color:#F9E8DF;">Teri Meri Yaadein</h1>
-  <div class="slideshow-wrap">
-    <div class="slideshow-frame" id="slideshow">
-      <img src="teesha1.jpeg" class="slide active" alt="">
-      <img src="teesha2.jpeg" class="slide" alt="">
-      <img src="teesha3.jpeg" class="slide" alt="">
-      <img src="teesha4.jpeg" class="slide" alt="">
-      <img src="teesha5.jpeg" class="slide" alt="">
-      <img src="teesha6.jpeg" class="slide" alt="">
-      <img src="teesha7.jpeg" class="slide" alt="">
-      <div class="slide-overlay"></div>
-      <div class="slide-counter" id="counter">1 / 7</div>
+  <p class="page-chip">✦ Our Memories ✦</p>
+  <h2 class="section-head">Teri Meri Yaadein</h2>
+
+  <div class="polaroid-wrap">
+    <div class="pushpin"></div>
+    <div class="polaroid">
+      <div class="polaroid-img" id="slideshow">
+        <img src="teesha1.jpeg" class="slide active" alt="">
+        <img src="teesha2.jpeg" class="slide" alt="">
+        <img src="teesha3.jpeg" class="slide" alt="">
+        <img src="teesha4.jpeg" class="slide" alt="">
+        <img src="teesha5.jpeg" class="slide" alt="">
+        <img src="teesha6.jpeg" class="slide" alt="">
+        <img src="teesha7.jpeg" class="slide" alt="">
+      </div>
+      <div class="polaroid-caption" id="polaroidCaption" style="display:none"></div>
     </div>
-    <div class="dots" id="dots"></div>
   </div>
+
+  <div class="film-dots" id="dots"></div>
+
   <div class="gift-prompt" id="giftBox">
     <button class="gift-btn" onclick="showPage('page3')">
-      <span class="emoji">🎁</span> Open your gift
+      🎁 Open your gift
     </button>
   </div>
 </div>
 
-<!-- PAGE 3 — ENVELOPE + SCRATCH CARD -->
+<!-- ══════ PAGE 3 ══════ -->
 <div class="page" id="page3">
-  <h1 class="section-title">A Letter For You</h1>
-  <p class="section-sub">Tap to open 💌</p>
+  <h2 class="section-head" style="font-family:'Playfair Display',serif;font-style:italic;color:var(--ink);font-size:clamp(1.8rem,5vw,3rem);margin-bottom:6px;position:relative;z-index:2;animation:fadeSlideUp .7s ease both;">A Letter For You</h2>
+  <p class="section-sub">Click the envelope to read 💌</p>
 
-  <div class="envelope-scene" onclick="showPage('page4');startTypewriter();">
-    <div class="envelope">
-      <div class="env-body"></div>
-      <div class="env-left"></div>
-      <div class="env-right"></div>
-      <div class="env-bottom"></div>
-      <div class="env-flap"></div>
-      <div class="env-seal">❤️</div>
+  <div class="envelope-wrap" onclick="showPage('page4');startTypewriter();">
+    <div class="env-main">
+      <!-- SVG envelope with slightly wobbly/hand-drawn feel -->
+      <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <!-- Envelope body -->
+        <rect x="4" y="4" width="312" height="212" rx="6" fill="#FFF5F0" stroke="#D4A0A0" stroke-width="1.5"/>
+        <!-- Left triangle -->
+        <path d="M4,4 L160,120 L4,216" fill="#FDEAE0" stroke="#D4A0A0" stroke-width="1"/>
+        <!-- Right triangle -->
+        <path d="M316,4 L160,120 L316,216" fill="#FDDDD8" stroke="#D4A0A0" stroke-width="1"/>
+        <!-- Bottom triangle -->
+        <path d="M4,216 L160,120 L316,216" fill="#FFF0EA" stroke="#D4A0A0" stroke-width="1"/>
+        <!-- Top flap -->
+        <path d="M4,4 L160,120 L316,4" fill="#F9D0D0" stroke="#D4A0A0" stroke-width="1"/>
+        <!-- Seal -->
+        <circle cx="160" cy="110" r="22" fill="#C9405A"/>
+        <text x="160" y="118" text-anchor="middle" font-size="18">❤️</text>
+        <!-- Stamp -->
+        <rect x="262" y="18" width="40" height="30" rx="2" fill="none" stroke="#C9405A" stroke-width="1" stroke-dasharray="2,2"/>
+        <text x="282" y="38" text-anchor="middle" font-family="Caveat,cursive" font-size="11" fill="#C9405A">LOVE</text>
+        <!-- Postmark circle -->
+        <circle cx="240" cy="38" r="18" fill="none" stroke="#D4A0A0" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+      </svg>
     </div>
-    <p class="env-hint">Click to read your letter</p>
+    <p class="env-click-hint">✦ click to open ✦</p>
   </div>
 
-  <div class="scratch-container">
-    <p class="scratch-label">✦ Scratch to reveal a secret ✦</p>
+  <div class="scratch-section">
+    <p class="scratch-title">✦ Scratch to reveal a secret ✦</p>
     <div class="scratch-card">
-      <div class="scratch-reveal">💕 My 11:11 wish is always you, Teesha 💕</div>
+      <div class="scratch-reveal">💕 My 11:11 wish is always you, Kaddu 💕</div>
       <canvas id="scratchCanvas"></canvas>
     </div>
-    <p class="scratch-hint">Use your finger or mouse to scratch ✨</p>
+    <p class="scratch-hint">Use your finger or mouse ✨</p>
   </div>
 </div>
 
-<!-- PAGE 4 — TYPEWRITER LETTER -->
+<!-- ══════ PAGE 4 ══════ -->
 <div class="page" id="page4">
-  <div class="letter-card">
-    <h2 class="letter-heading">Dearest Teesha,</h2>
-    <p class="letter-date">Valentine's Day · With all my heart</p>
+  <div class="letter-paper">
+    <div class="hole" style="top:60px;"></div>
+    <div class="hole" style="top:160px;"></div>
+    <div class="hole" style="top:260px;"></div>
+
+    <div class="letter-to">Dearest Kaddu,</div>
+    <div class="letter-date-line">Valentine's Day · With all my heart</div>
     <div class="letter-divider"></div>
     <p class="letter-body" id="letterBody"><span class="cursor-blink"></span></p>
-    <p class="letter-sign" id="letterSign">— Satyam 💕</p>
+    <span class="letter-sign" id="letterSign">— Satyam 💕</span>
   </div>
-  <div class="final-banner">
-    <div class="love-text">I Love You ❤️</div>
-    <div class="forever-text">Forever Locked 🔒</div>
+
+  <div class="love-banner">
+    <div class="love-word">I Love You ❤️</div>
+    <div class="love-forever">forever locked 🔒</div>
   </div>
   <button class="diary-link-btn" onclick="showPage('page5')">📖 Open Our Secret Diary</button>
 </div>
 
-<!-- PAGE 5 — LOCKED DIARY -->
+<!-- ══════ PAGE 5 ══════ -->
 <div class="page" id="page5">
-  <p class="diary-chip">✦ Private · Eyes Only ✦</p>
-  <div class="diary-book">
-    <div class="diary-title">Our Secret Diary</div>
-    <div class="diary-sub">Protected with love 🔒</div>
+  <p class="diary-chip">✦ PRIVATE · EYES ONLY ✦</p>
 
-    <div id="diaryLock">
-      <span class="lock-icon" id="lockIcon">🔒</span>
-      <p class="diary-hint">Enter the secret word to unlock<br/><em style="font-size:.78rem;opacity:.6;">Hint: The date You said yes </em></p>
-      <input class="diary-input" id="diaryInput" type="password" placeholder="enter secret word..." autocomplete="off" onkeydown="if(event.key==='Enter')tryUnlock()">
-      <div><button class="diary-submit" onclick="tryUnlock()">Unlock ✨</button></div>
-      <p class="diary-error" id="diaryError"></p>
-    </div>
+  <div class="diary-outer">
+    <div class="diary-book">
+      <div class="diary-title">Our Secret Diary</div>
+      <div class="diary-sub">Protected with love 🔒</div>
 
-    <div class="diary-content" id="diaryContent">
-      <div class="unlocked-header">
-        <div class="unlocked-icon">📖</div>
-        <div class="unlocked-title">You're in ❤️</div>
+      <div id="diaryLock">
+        <span class="lock-icon" id="lockIcon">🔒</span>
+
+        <input class="diary-input" id="diaryInput" type="password" placeholder="enter secret word..." autocomplete="off" onkeydown="if(event.key==='Enter')tryUnlock()">
+        <button class="diary-submit" onclick="tryUnlock()">Unlock ✨</button>
+        <p class="diary-error" id="diaryError"></p>
       </div>
-      <div class="diary-entries">
-        <div class="diary-entry">
-          <div class="diary-entry-date">02 Oct · Day One</div>
-          When you sent that one little "Hlo" — my whole world shifted. I knew something beautiful was beginning again.
+
+      <div class="diary-content" id="diaryContent">
+        <div class="unlocked-header">
+          <span class="unlocked-emoji">📖</span>
+          <div class="unlocked-title">You're in ❤️</div>
         </div>
-        <div class="diary-entry">
-          <div class="diary-entry-date">The night I realised</div>
-          It hit me quietly — that I don't want a single day without your voice. Not one. Ever.
-        </div>
-        <div class="diary-entry">
-          <div class="diary-entry-date">My 11:11 wish</div>
-          Every single night — that my family stays happy and that I get to build a life with you. That's it. That's the whole wish.
-        </div>
-        <div class="diary-entry">
-          <div class="diary-entry-date">What I'll never say enough</div>
-          Seeing you happy gives me a kind of peace I can't explain. Like everything is exactly where it should be.
-        </div>
-        <div class="diary-entry">
-          <div class="diary-entry-date">Forever & Always</div>
-          Be with me till the very end, Teesha. I even want to steal your teeth when we're old 😂 That's how sure I am about us.
+        <div class="diary-entries">
+          <div class="diary-entry">
+            <div class="diary-entry-date">02 Oct · Day One</div>
+            <p>When you sent that one little "Hlo" — my whole world shifted. I knew something beautiful was beginning again.</p>
+          </div>
+          <div class="diary-entry">
+            <div class="diary-entry-date">The night I realised</div>
+            <p>It hit me quietly — that I don't want a single day without your voice. Not one. Ever.</p>
+          </div>
+          <div class="diary-entry">
+            <div class="diary-entry-date">My 11:11 wish</div>
+            <p>Every single night — that my family stays happy and that I get to build a life with you. That's it. That's the whole wish.</p>
+          </div>
+          <div class="diary-entry">
+            <div class="diary-entry-date">What I'll never say enough</div>
+            <p>Seeing you happy gives me a kind of peace I can't explain. Like everything is exactly where it should be.</p>
+          </div>
+          <div class="diary-entry">
+            <div class="diary-entry-date">Forever & Always</div>
+            <p>Be with me till the very end, Kaddu. I even want to steal your teeth when we're old 😂 That's how sure I am about us.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -279,223 +1128,243 @@ canvas#scratchCanvas{position:absolute;inset:0;border-radius:18px;}
 </div>
 
 <script>
-
-
-/* PETALS */
-const petalChars=['🌸','🌹','✿','❀','♡','❤'];
-function spawnPetal(){
-  const p=document.createElement('div');p.className='petal';
-  p.textContent=petalChars[Math.floor(Math.random()*petalChars.length)];
-  p.style.left=Math.random()*100+'vw';
-  p.style.fontSize=(10+Math.random()*12)+'px';
-  const dur=7+Math.random()*8;
-  p.style.animationDuration=dur+'s';
-  p.style.animationDelay=Math.random()*4+'s';
-  document.body.appendChild(p);
-  setTimeout(()=>p.remove(),(dur+4)*1000);
-}
-setInterval(spawnPetal,600);
-
-/* NO BUTTON */
-const noBtn=document.getElementById('noBtn');
-noBtn.addEventListener('mouseover',()=>{
-  noBtn.style.position='fixed';noBtn.style.zIndex='1000';
-  noBtn.style.left=Math.max(10,Math.random()*(window.innerWidth-noBtn.offsetWidth-10))+'px';
-  noBtn.style.top=Math.max(10,Math.random()*(window.innerHeight-noBtn.offsetHeight-10))+'px';
-});
-
-/* PAGE HELPER */
-function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
-  document.getElementById(id).classList.add('show');
+/* ── PAGE NAVIGATION ── */
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => { p.classList.remove('show'); p.style.display = ''; });
+  const p = document.getElementById(id);
+  p.classList.add('show');
+  p.style.display = 'flex';
   window.scrollTo(0,0);
+  if (id === 'page2') initSlideshow();
+  if (id === 'page3') initScratch();
 }
 
-/* COUNTDOWN — anniversary Oct 2 */
-function updateCountdown(){
-  const now=new Date();
-  let next=new Date(now.getFullYear(),9,2);
-  if(now>=next) next=new Date(now.getFullYear()+1,9,2);
-  const diff=next-now;
-  const d=Math.floor(diff/86400000),
-        h=Math.floor((diff%86400000)/3600000),
-        m=Math.floor((diff%3600000)/60000),
-        s=Math.floor((diff%60000)/1000);
-  document.getElementById('cdDays').textContent=String(d).padStart(2,'0');
-  document.getElementById('cdHours').textContent=String(h).padStart(2,'0');
-  document.getElementById('cdMins').textContent=String(m).padStart(2,'0');
-  document.getElementById('cdSecs').textContent=String(s).padStart(2,'0');
-}
-updateCountdown();
-setInterval(updateCountdown,1000);
-
-/* FIREWORKS */
-const fwCanvas=document.getElementById('fwCanvas');
-const fwCtx=fwCanvas.getContext('2d');
-let particles=[];
-function resizeFW(){fwCanvas.width=window.innerWidth;fwCanvas.height=window.innerHeight;}
-resizeFW();window.addEventListener('resize',resizeFW);
-function createBurst(x,y){
-  const cols=['#E8748A','#C0446A','#F7C5C5','#FFD700','#FF9EB5','#ffffff','#FDEAE0'];
-  for(let i=0;i<90;i++){
-    const a=Math.random()*Math.PI*2,sp=2+Math.random()*7;
-    particles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,
-      color:cols[Math.floor(Math.random()*cols.length)],
-      size:2+Math.random()*3,life:1,decay:.010+Math.random()*.014});
-  }
-}
-function animFW(){
-  fwCtx.clearRect(0,0,fwCanvas.width,fwCanvas.height);
-  particles=particles.filter(p=>p.life>0);
-  particles.forEach(p=>{
-    p.x+=p.vx;p.y+=p.vy;p.vy+=.08;p.life-=p.decay;
-    fwCtx.globalAlpha=Math.max(0,p.life);
-    fwCtx.fillStyle=p.color;
-    fwCtx.beginPath();fwCtx.arc(p.x,p.y,p.size,0,Math.PI*2);fwCtx.fill();
-  });
-  fwCtx.globalAlpha=1;
-  requestAnimationFrame(animFW);
-}
-animFW();
-function launchFireworks(){
-  let n=0;
-  const iv=setInterval(()=>{
-    createBurst(Math.random()*window.innerWidth,Math.random()*window.innerHeight*.65);
-    if(++n>=10)clearInterval(iv);
-  },200);
+/* ── NO BUTTON RUN AWAY ── */
+function moveNoBtn(btn) {
+  const vw = window.innerWidth, vh = window.innerHeight;
+  btn.style.position = 'fixed';
+  btn.style.left = Math.random()*(vw-100)+'px';
+  btn.style.top  = Math.random()*(vh-50)+'px';
+  btn.style.zIndex = 1000;
 }
 
-/* YES BUTTON */
-function yesClicked(){
-  document.getElementById('bgm').play().catch(()=>{});
+/* ── YES CLICKED ── */
+function yesClicked() {
   launchFireworks();
-  setTimeout(()=>{
-    showPage('page2');
-    startSlideshow();
-  },1900);
+  spawnPetals();
+  document.getElementById('bgm').play().catch(()=>{});
+  setTimeout(()=>showPage('page2'), 2400);
 }
 
-/* SLIDESHOW */
-let slideIndex=0,intervalId;
-const slides=document.querySelectorAll('.slide');
-const dotsWrap=document.getElementById('dots');
-const counter=document.getElementById('counter');
-const total=slides.length;
-slides.forEach((_,i)=>{
-  const d=document.createElement('div');
-  d.className='dot'+(i===0?' active':'');
-  dotsWrap.appendChild(d);
-});
-const dots=document.querySelectorAll('.dot');
-function updateSlides(){
-  slides.forEach((s,i)=>s.classList.toggle('active',i===slideIndex));
-  dots.forEach((d,i)=>d.classList.toggle('active',i===slideIndex));
-  counter.textContent=(slideIndex+1)+' / '+total;
-}
-function startSlideshow(){
-  slideIndex=0;updateSlides();
-  intervalId=setInterval(()=>{
-    slideIndex++;
-    if(slideIndex>=total){clearInterval(intervalId);document.getElementById('giftBox').classList.add('visible');return;}
-    updateSlides();
-  },2600);
-}
 
-/* SCRATCH CARD */
-window.addEventListener('load',()=>{
-  const sc=document.getElementById('scratchCanvas');
-  const ctx=sc.getContext('2d');
-  sc.width=260;sc.height=120;
-  const g=ctx.createLinearGradient(0,0,260,120);
-  g.addColorStop(0,'#B03060');g.addColorStop(.5,'#D45070');g.addColorStop(1,'#E87090');
-  ctx.fillStyle=g;ctx.fillRect(0,0,260,120);
-  ctx.fillStyle='rgba(255,255,255,.12)';
-  for(let i=0;i<20;i++) ctx.fillRect(Math.random()*260,Math.random()*120,30+Math.random()*70,1.5);
-  ctx.fillStyle='rgba(255,255,255,.9)';
-  ctx.font='600 14px DM Sans';ctx.textAlign='center';ctx.textBaseline='middle';
-  ctx.fillText('✨  Scratch here  ✨',130,60);
 
-  let scratching=false;
-  function getPos(e){
-    const r=sc.getBoundingClientRect();
-    if(e.touches) return{x:e.touches[0].clientX-r.left,y:e.touches[0].clientY-r.top};
-    return{x:e.clientX-r.left,y:e.clientY-r.top};
+/* ── PETALS ── */
+function spawnPetals() {
+  const symbols = ['🌸','🌺','💮','🌷','🍀'];
+  for (let i=0;i<18;i++) {
+    setTimeout(()=>{
+      const el = document.createElement('div');
+      el.className = 'petal-float';
+      el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      el.style.left = Math.random()*100+'vw';
+      el.style.animationDuration = (4+Math.random()*5)+'s';
+      el.style.animationDelay = (Math.random()*2)+'s';
+      el.style.fontSize = (0.8+Math.random()*0.8)+'rem';
+      document.body.appendChild(el);
+      setTimeout(()=>el.remove(), 9000);
+    }, i*200);
   }
-  function scratch(e){
-    const{x,y}=getPos(e);
-    ctx.globalCompositeOperation='destination-out';
-    ctx.beginPath();ctx.arc(x,y,24,0,Math.PI*2);ctx.fill();
+}
+
+/* ── SLIDESHOW ── */
+let slideIdx = 0, slideTimer;
+function initSlideshow() {
+  if (slideTimer) return;
+  const slides = document.querySelectorAll('#slideshow .slide');
+  const dotsEl = document.getElementById('dots');
+  dotsEl.innerHTML = '';
+  slides.forEach((_,i)=>{
+    const d = document.createElement('div');
+    d.className = 'film-dot'+(i===0?' active':'');
+    dotsEl.appendChild(d);
+  });
+  slideTimer = setInterval(()=>{
+    slides[slideIdx].classList.remove('active');
+    document.querySelectorAll('.film-dot')[slideIdx].classList.remove('active');
+    slideIdx = (slideIdx+1)%slides.length;
+    slides[slideIdx].classList.add('active');
+    document.querySelectorAll('.film-dot')[slideIdx].classList.add('active');
+    if (slideIdx === slides.length-1) {
+      setTimeout(()=>document.getElementById('giftBox').classList.add('visible'),1200);
+    }
+  }, 2200);
+}
+
+/* ── SCRATCH CARD ── */
+function initScratch() {
+  const canvas = document.getElementById('scratchCanvas');
+  const card = canvas.parentElement;
+  canvas.width = card.offsetWidth;
+  canvas.height = card.offsetHeight;
+  const ctx = canvas.getContext('2d');
+
+  // Gold-ish scratch surface
+  const grad = ctx.createLinearGradient(0,0,canvas.width,canvas.height);
+  grad.addColorStop(0,'#D4956A');
+  grad.addColorStop(0.5,'#C8963E');
+  grad.addColorStop(1,'#B8802A');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  // Scratch text overlay
+  ctx.fillStyle = 'rgba(255,255,255,0.15)';
+  ctx.font = 'bold 13px DM Sans, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('✦ SCRATCH HERE ✦', canvas.width/2, canvas.height/2-4);
+  ctx.font = '11px DM Sans, sans-serif';
+  ctx.fillText('reveal your secret 🌹', canvas.width/2, canvas.height/2+14);
+
+  ctx.globalCompositeOperation = 'destination-out';
+  let scratching = false;
+
+  function getPos(e) {
+    const r = canvas.getBoundingClientRect();
+    const src = e.touches ? e.touches[0] : e;
+    return { x: src.clientX-r.left, y: src.clientY-r.top };
   }
-  sc.addEventListener('mousedown',e=>{scratching=true;scratch(e);});
-  sc.addEventListener('mousemove',e=>{if(scratching)scratch(e);});
-  sc.addEventListener('mouseup',()=>scratching=false);
-  sc.addEventListener('touchstart',e=>{e.preventDefault();scratching=true;scratch(e);},{passive:false});
-  sc.addEventListener('touchmove',e=>{e.preventDefault();if(scratching)scratch(e);},{passive:false});
-  sc.addEventListener('touchend',()=>scratching=false);
-});
+  function scratch(e) {
+    if (!scratching) return;
+    e.preventDefault();
+    const {x,y} = getPos(e);
+    ctx.beginPath();
+    ctx.arc(x,y,22,0,Math.PI*2);
+    ctx.fill();
+  }
+  canvas.addEventListener('mousedown',  e=>{ scratching=true; scratch(e); });
+  canvas.addEventListener('mousemove',  scratch);
+  canvas.addEventListener('mouseup',    ()=>scratching=false);
+  canvas.addEventListener('touchstart', e=>{ scratching=true; scratch(e); });
+  canvas.addEventListener('touchmove',  scratch);
+  canvas.addEventListener('touchend',   ()=>scratching=false);
+}
 
-/* TYPEWRITER */
-const LETTER=`Moshi Moshi Teesha — dekh, esa letter likhna aata toh nhi pr try krte hai. Toh kaha sai shuru kare? Ha, 2 October — pata nahi kya aaya tere dimag mai that you decided ki ha, propose hee kr dete hai Satyam ko \u{1F605} Lagbhag 5-6 saal sai baat nhi hui thi humaari aur jis note pr end hui thi vo bhi kharab hee tha. But sahi batau Teesha — the moment you sent me that 'Hlo' message, mai toh vahi ha kr di thi terko.
 
-Pr vahi tha ki jaise pehle chutiyap kiya tha maine, mai vo nhi krna chahta tha dubara. Toh maine socha ki mai bus terse baat karu — but aanko mai nhi dekhna \u{1F602} aur call rakh dena hai. But then you be like "shadi karega Satyam merse." Mai be like full happy happy — yea kya ho gaya. Thoda time toh laga ki koi sapna hee dekh raha hu.
+/* ── TYPEWRITER ── */
+const LETTER=`Moshi Moshi Kaddu — dekh, esa letter likhna aata toh nhi pr try krte hai. Toh kaha sai shuru kare? Ha, 2 October — pata nahi kya aaya tere dimag mai that you decided ki ha, propose hee kr dete hai Satyam ko 😅 Lagbhag 5-6 saal sai baat nhi hui thi humaari aur jis note pr end hui thi vo bhi kharab hee tha. But sahi batau Kaddu — the moment you sent me that 'Hlo' message, mai toh vahi ha kr di thi terko.
 
-Then baat karne lage hm. Maine kayi sari nayi feelings explore kari for the first time. Teri love language samaz aane lagi — choti choti chize jo tu krti hai. Jaise mere gande jokes pe hasna, mere bare mai sochna ki "iska game kaise bajana hai" \u{1F602}
+Pr vahi tha ki jaise pehle chutiyap kiya tha maine, mai vo nhi krna chahta tha dubara. Toh maine socha ki mai bus terse baat karu — but aanko mai nhi dekhna 😂 aur call rakh dena hai. But then you be like "shadi karega Satyam merse." Mai be like full happy happy — yea kya ho gaya. Thoda time toh laga ki koi sapna hee dekh raha hu.
 
-Aur ha — mai sahi batau toh mai text pr toh bata bhi nhi sakta that how much I adore each and every photo you send me. Mai toh satve aasman pr pohoch jaata hu. Sorry Teesha — kabhi kabhi rude ho jata hu \u{1F605} Pr sahi batau — mai kabhi khona nhi chahta terko.
+Then baat karne lage hm. Maine kayi sari nayi feelings explore kari for the first time. Teri love language samaz aane lagi — choti choti chize jo tu krti hai. Jaise mere gande jokes pe hasna, mere bare mai sochna ki "iska game kaise bajana hai" 😂
 
-Tu toh imagine bhi nhi kr sakti ki kitna khush hota hu mai terse baat karke. Weird si khushi milti hai jab tu khush hoti hai, sukun milta hai. Meri dil ki dhadkan tez ho gayi likhte likhte \u{1F493}
+Aur ha — mai sahi batau toh mai text pr toh bata bhi nhi sakta that how much I adore each and every photo you send me. Mai toh satve aasman pr pohoch jaata hu. Sorry Kaddu — kabhi kabhi rude ho jata hu 😅 Pr sahi batau — mai kabhi khona nhi chahta terko.
+
+Tu toh imagine bhi nhi kr sakti ki kitna khush hota hu mai terse baat karke. Weird si khushi milti hai jab tu khush hoti hai, sukun milta hai. Meri dil ki dhadkan tez ho gayi likhte likhte 💓
 
 Meri 11:11 ki wish — ki meri family khush rahe aur mai aaram se tere sath ek happy life jee saku.
 
-So Teesha — be with me till the very end. Tere daant bhi toh churane hai bhudhape mai \u{1F602}`;
+So Kaddu — be with me till the very end. Tere daant bhi toh churane hai bhudhape mai 😂`;
 
-let twDone=false;
+let twDone = false;
 function startTypewriter(){
-  if(twDone)return; twDone=true;
-  const el=document.getElementById('letterBody');
-  const sign=document.getElementById('letterSign');
-  el.innerHTML='<span class="cursor-blink"></span>';
-  const chars=[...LETTER];
-  let i=0,html='';
+  if(twDone) return; twDone = true;
+  const el = document.getElementById('letterBody');
+  const sign = document.getElementById('letterSign');
+  el.innerHTML = '<span class="cursor-blink"></span>';
+  const chars = [...LETTER];
+  let i = 0, html = '';
   function type(){
-    if(i<chars.length){
-      const ch=chars[i++];
-      if(ch==='\n'&&chars[i]==='\n'){html+='<br><br>';i++;}
-      else if(ch!=='\n') html+=ch;
-      el.innerHTML=html+'<span class="cursor-blink"></span>';
-      setTimeout(type,ch==='\n'?0:20+Math.random()*16);
+    if(i < chars.length){
+      const ch = chars[i++];
+      if(ch === '\n' && chars[i] === '\n'){ html += '<br><br>'; i++; }
+      else if(ch !== '\n') html += ch;
+      el.innerHTML = html + '<span class="cursor-blink"></span>';
+      setTimeout(type, ch === '\n' ? 0 : 20 + Math.random()*16);
     } else {
-      el.innerHTML=html;
+      el.innerHTML = html;
       sign.classList.add('visible');
     }
   }
   type();
 }
 
-/* LOCKED DIARY */
-const SECRET='02102025';
-let attempts=0;
-function tryUnlock(){
-  const val=document.getElementById('diaryInput').value.trim();
-  const err=document.getElementById('diaryError');
-  if(val===SECRET){
-    document.getElementById('lockIcon').textContent='🔓';
-    err.textContent='';
+
+/* ── DIARY UNLOCK ── */
+const SECRET = '02102025';
+let attempts = 0;
+function tryUnlock() {
+  const val = document.getElementById('diaryInput').value.trim();
+  const err = document.getElementById('diaryError');
+  if (val === SECRET) {
+    document.getElementById('lockIcon').textContent = '🔓';
+    err.textContent = '';
+    launchFireworks();
     setTimeout(()=>{
-      document.getElementById('diaryLock').style.display='none';
+      document.getElementById('diaryLock').style.display = 'none';
       document.getElementById('diaryContent').classList.add('open');
-    },600);
+    }, 600);
   } else {
     attempts++;
-    const msgs=["Hmm, that's not it 🤔","Try again,Agent Kaddu 💕","Think: DDMMYYYY 😉","So close! One more try 🌸","You'll get it! I believe in you ❤️"];
-    err.textContent=msgs[Math.min(attempts-1,msgs.length-1)];
-    document.getElementById('diaryInput').value='';
-    const inp=document.getElementById('diaryInput');
-    inp.style.borderColor='rgba(255,80,100,.5)';
-    setTimeout(()=>inp.style.borderColor='rgba(232,116,138,.22)',900);
+    const msgs = ["Hmm, that's not it 🤔","Try again, Agent Kaddu 💕","Think: DDMMYYYY 😉","So close! One more try 🌸","You'll get it! I believe in you ❤️"];
+    err.textContent = msgs[Math.min(attempts-1, msgs.length-1)];
+    document.getElementById('diaryInput').value = '';
+    const inp = document.getElementById('diaryInput');
+    inp.style.borderColor = 'rgba(255,80,100,.5)';
+    setTimeout(()=>inp.style.borderColor='', 900);
   }
+}
+
+/* ── FIREWORKS ── */
+const fwCanvas = document.getElementById('fwCanvas');
+const fwCtx = fwCanvas.getContext('2d');
+let fwParticles = [];
+
+function resizeFW() { fwCanvas.width=window.innerWidth; fwCanvas.height=window.innerHeight; }
+resizeFW();
+window.addEventListener('resize', resizeFW);
+
+function launchFireworks() {
+  for (let b=0;b<8;b++) {
+    setTimeout(()=>{
+      const x = 0.2*window.innerWidth + Math.random()*0.6*window.innerWidth;
+      const y = 0.1*window.innerHeight + Math.random()*0.5*window.innerHeight;
+      const colors = ['#C9405A','#F2A0AD','#D4A56A','#FADADD','#FFF','#E87494'];
+      for (let i=0;i<60;i++) {
+        const angle = (Math.PI*2/60)*i;
+        const speed = 2+Math.random()*5;
+        fwParticles.push({
+          x, y,
+          vx: Math.cos(angle)*speed,
+          vy: Math.sin(angle)*speed - Math.random()*2,
+          color: colors[Math.floor(Math.random()*colors.length)],
+          alpha: 1,
+          size: 2+Math.random()*3,
+          life: 0.015+Math.random()*0.02
+        });
+      }
+    }, b*280);
+  }
+  if (!fwRunning) animateFireworks();
+}
+
+let fwRunning = false;
+function animateFireworks() {
+  fwRunning = true;
+  fwCtx.clearRect(0,0,fwCanvas.width,fwCanvas.height);
+  fwParticles = fwParticles.filter(p=>p.alpha>0);
+  fwParticles.forEach(p=>{
+    p.x+=p.vx; p.y+=p.vy; p.vy+=0.12;
+    p.vx*=0.97; p.alpha-=p.life;
+    fwCtx.save();
+    fwCtx.globalAlpha = Math.max(0,p.alpha);
+    fwCtx.fillStyle = p.color;
+    fwCtx.beginPath();
+    fwCtx.arc(p.x,p.y,p.size,0,Math.PI*2);
+    fwCtx.fill();
+    fwCtx.restore();
+  });
+  if (fwParticles.length>0) requestAnimationFrame(animateFireworks);
+  else { fwRunning=false; fwCtx.clearRect(0,0,fwCanvas.width,fwCanvas.height); }
 }
 </script>
 </body>
 </html>
-
