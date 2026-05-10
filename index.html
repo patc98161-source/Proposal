@@ -358,18 +358,18 @@ body::before {
   background: #fff;
   padding: 12px 12px 14px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3);
-  width: min(88vw, 320px);
+  width: min(95vw, 500px); 
   transform: rotate(-1deg);
   position: relative;
 }
 
-/* ── FIXED: Full image visible, no cropping ── */
+
 .polaroid-img {
   width: 100%;
-  aspect-ratio: unset;
-  min-height: 200px;
-  max-height: 380px;
-  overflow: hidden;
+  height: auto;
+  min-height: 250px;
+  max-height: 80vh;
+  overflow: visible;
   position: relative;
   background: #f0ebe6;
   display: flex;
@@ -382,12 +382,13 @@ body::before {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center center;
+  object-fit: contain;   
+  object-position: center;
   background: #f0ebe6;
   opacity: 0;
   transition: opacity 1s ease;
 }
+
 .polaroid-img .slide.active { opacity: 1; }
 
 .polaroid-caption {
